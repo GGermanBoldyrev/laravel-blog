@@ -19,5 +19,6 @@
         </div>
     </div>
     {{-- JavaScript files--}}
+    @vite('resources/js/app.js')
 </body>
 </html>

@@ -7,7 +7,8 @@ class PostController extends Controller
     /*Метод для отображения всех постов*/
     public function index()
     {
-        return 'All posts';
+        $data = ['title' => 'Audi rebranding', 'subtitle' => 'audi started to die'];
+        return json_encode($data);
     }
 
     /*Метод для отображения страницы создания поста*/

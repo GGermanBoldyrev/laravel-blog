@@ -3,6 +3,7 @@
     font-family: 'Montserrat', sans-serif; 200, 300, 400, 500, 600
     font-family: 'Dancing Script', cursive;
 */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap');
 
@@ -10,3 +11,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.animate-color {
+    animation: animate-color 8s infinite;
+}
+
+@keyframes animate-color {
+    from {
+        color: #abccab;
+    }
+
+    50% {
+        color: #93af93;
+    }
+
+    to {
+        color: #abccab;
+    }
+}

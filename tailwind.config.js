@@ -14,10 +14,11 @@ module.exports = {
           colors: {
               "header": "#577783",
               "background" : "#4583AA",
-              "footer": "#1D2B34"
+              "footer": "#1D2B34",
           },
           width: {
               "250px": 250,
+              '1175px': 1175
           },
           height: {
               "76px": 76,
@@ -28,6 +29,9 @@ module.exports = {
               "screen-minus-header": 'calc(100vh - 76px)',
               "main-page": 'calc(100vh - 125px)',
           },
+          translate: {
+              'minus-50%': '-50%',
+          }
       },
     },
     plugins: [],
