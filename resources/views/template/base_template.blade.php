@@ -4,14 +4,16 @@
     @include('template.sections.head')
 <body class="bg-background font-main">
     {{-- Naigation --}}
-    <div class="bg-header">
+    <div class="bg-header sticky z-10">
         <div class="container mx-auto">
             @include('template.sections.navigation')
         </div>
     </div>
     {{-- Main Content of the Page --}}
-        @section('content')
-        @show
+        <div>
+            @section('content')
+            @show
+        </div>
     {{-- Footer --}}
     <div class="bg-footer">
         <div class="container mx-auto">

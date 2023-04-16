@@ -18,14 +18,14 @@
 
 @keyframes animate-color {
     from {
-        color: #abccab;
+        color: #c2eec2;
     }
 
     50% {
-        color: #93af93;
+        color: #aed2ae;
     }
 
     to {
-        color: #abccab;
+        color: #c2eec2;
     }
 }

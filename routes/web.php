@@ -9,7 +9,7 @@ use App\Http\Controllers\PostController;
 |--------------------------------------------------------------------------
 |
 | Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
+| routes are loaded by the RouteServiceProvider and all of them w
 | be assigned to the "web" middleware group. Make something great!
 |
 */
@@ -26,6 +26,6 @@ Route::fallback(function () {
     return view('404');
 });
 
-Route::get('/ilya', function (){
+Route::get('/ilya', function () {
     return 'ilya';
 });
