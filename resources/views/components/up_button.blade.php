@@ -8,7 +8,7 @@
                     before:content-['Up'] before:opacity-0
                     hover:before:opacity-100">
             {{--На hover пропадает стрелка вверх--}}
-            <img class="p-2 h-full w-full rounded-full absolute hover:opacity-0" src="{{ asset('images/up-arrow.png') }}">
+            <img class="p-2 h-full w-full rounded-full absolute hover:opacity-0" src="{{ asset('images/up-arrow.png') }}" alt="Up">
         </div>
     </div>
 </div>
