@@ -15,6 +15,7 @@ module.exports = {
               "header": "#577783",
               "background" : "#4583AA",
               "footer": "#1D2B34",
+              "button-hover": "#3b7091",
           },
           width: {
               "250px": 250,

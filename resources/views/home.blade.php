@@ -10,7 +10,7 @@
                 </video>
                 <div id="welcome-text" class="whitespace-nowrap opacity-80 w-fit absolute top-1/2 left-1/2 translate-x-minus-50% translate-y-minus-50%
                 text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl
-                ">
+                hover:cursor-default">
                     Glad to see
                 </div>
             </div>

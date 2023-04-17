@@ -20,6 +20,7 @@
 {{-- Сюда бдем писать Footer //bg-footer container mx-auto// --}}
 
 {{-- Подключаем JavaScript файлы--}}
-@vite('resources/js/app.js')
+@vite('resources/js/text_animation.js')
+@vite('resources/js/up_button.js')
 </body>
 </html>

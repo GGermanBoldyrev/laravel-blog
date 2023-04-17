@@ -1,15 +1,14 @@
-{{--Button position--}}
-<div class="fixed bottom-10 right-10">
-    {{--Button round properties--}}
-    <div class="h-60px w-60px border rounded-full text-white text-2xl font-medium">
-        {{--Arrow, прячем на hover--}}
-        <div class="w-full h-full rounded-full flex justify-center items-center
-                    hover:opacity-0">
-            {{--Arrow image--}}
-            <img src="{{ asset('images/up-arrow.png') }}" alt="Up" class="h-arrow-height">
+{{--Позиция кнопки--}}
+<div id="up-button" class="fixed bottom-10 right-10">
+    {{--Общее оформление кнопки--}}
+    <div class="h-60px w-60px border rounded-full text-slate-200 text-2xl font-medium relative flex justify-center items-center
+              hover:bg-button-hover hover:border-button-hover hover:shadow-inner hover:cursor-pointer">
+        {{--На hover появляется текст--}}
+        <div class="flex items-center justify-center w-full h-full rounded-full
+                    before:content-['Up'] before:opacity-0
+                    hover:before:opacity-100">
+            {{--На hover пропадает стрелка вверх--}}
+            <img class="p-2 h-full w-full rounded-full absolute hover:opacity-0" src="{{ asset('images/up-arrow.png') }}">
         </div>
-        {{--Up текст скрыт, на hover видимый--}}
-        <div class="absolute invisible top-1/2 left-1/2 -mt-[16px] -ml-[17.68px]
-                    hover:inline-block">Up</div>
     </div>
 </div>

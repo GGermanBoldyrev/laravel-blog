@@ -13,7 +13,7 @@
         <div class="text-white flex justify-between h-76px items-center">
             {{--Левая часть header--}}
             <div class="font-logo text-6xl">
-                <a href="/">Car Blog</a>
+                <a href="/" class="hover:cursor-default">Car Blog</a>
             </div>
             {{--Правая часть header--}}
             <div class="text-2xl flex h-full items-center relative left-1.5">
