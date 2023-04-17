@@ -25,7 +25,3 @@ Route::resource('/posts', PostController::class);
 Route::fallback(function () {
     return view('404');
 });
-
-Route::get('/ilya', function () {
-    return 'ilya';
-});
