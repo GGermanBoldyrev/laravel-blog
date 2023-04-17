@@ -6,8 +6,6 @@
 
     <title>CarBlog</title>
 
-    <!-- Fonts -->
-    {{-- Here --}}
     <!-- Styles -->
     {{-- Here --}}
 </head>
