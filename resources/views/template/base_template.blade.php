@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    {{-- Including HTML head section --}}
+
+    {{-- Подключаем HTML заголовоки --}}
     @include('template.sections.head')
+
 <body class="bg-background font-main">
-    {{-- Naigation --}}
-    <div class="bg-header sticky z-10">
-        <div class="container mx-auto">
-            @include('template.sections.navigation')
-        </div>
-    </div>
-    {{-- Main Content of the Page --}}
-        <div>
-            @section('content')
-            @show
-        </div>
-    {{-- Footer --}}
-    <div class="bg-footer">
-        <div class="container mx-auto">
-            {{-- Сюда бдем писать Footer --}}
-        </div>
-    </div>
-    {{-- JavaScript files--}}
+
+    {{-- Подключаем Header --}}
+    @include('template.sections.header')
+
+    {{-- Подключаем основкую секцию --}}
+    @section('content')
+    @show
+
+    {{-- Подключаем Footer --}}
+    {{-- Сюда бдем писать Footer //bg-footer container mx-auto// --}}
+
+    {{-- Подключаем JavaScript файлы--}}
     @vite('resources/js/app.js')
 </body>
 </html>
