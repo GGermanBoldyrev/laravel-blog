@@ -18,12 +18,15 @@ module.exports = {
           },
           width: {
               "250px": 250,
-              '1175px': 1175
+              '1175px': 1175,
+              '60px': 60
           },
           height: {
               "76px": 76,
               "250px": 250,
               "screen-minus-header": 'calc(100vh - 76px)',
+              "arrow-height": 42,
+              '60px': 60
           },
           minHeight: {
               "screen-minus-header": 'calc(100vh - 76px)',
@@ -32,7 +35,7 @@ module.exports = {
           },
           translate: {
               'minus-50%': '-50%',
-          }
+          },
       },
     },
     plugins: [],
