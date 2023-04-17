@@ -3,7 +3,6 @@ import './bootstrap';
 const text = document.getElementById('welcome-text');
 
 const welcomeTextParts = [
-    "Glad to see",
     'Glad to see y',
     'Glad to see yo',
     'Glad to see you .',

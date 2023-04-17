@@ -23,11 +23,11 @@
                     @foreach($titles as $title)
                         <li
                             {{--Если мы находимся на главной странице--}}
-                            @if(url()->current() !== env("APP_URL"))
-                                class="hover:bg-background"
+                            @if(url()->current() === env("APP_URL"))
+                                class="hover:text-slate-400"
                             {{--Если мы находимся на любой странице, кроме главной--}}
                             @else
-                                class=""
+                                class="hover:bg-background"
                             @endif>
                             <a href="{{ $title['href'] }}">
                                 {{ $title['title'] }}

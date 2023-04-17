@@ -28,6 +28,7 @@ module.exports = {
           minHeight: {
               "screen-minus-header": 'calc(100vh - 76px)',
               "main-page": 'calc(100vh - 125px)',
+              "1000px": 10000,
           },
           translate: {
               'minus-50%': '-50%',

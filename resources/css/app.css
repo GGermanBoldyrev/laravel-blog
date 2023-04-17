@@ -13,19 +13,19 @@
 @tailwind utilities;
 
 .animate-color {
-    animation: animate-color 8s infinite;
+    animation: animate-color 12s infinite;
 }
 
 @keyframes animate-color {
     from {
-        color: #c2eec2;
+        color: white;
     }
 
     50% {
-        color: #aed2ae;
+        color: #cfe2ff;
     }
 
     to {
-        color: #c2eec2;
+        color: white;
     }
 }
