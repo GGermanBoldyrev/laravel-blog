@@ -15,6 +15,7 @@ use App\Http\Controllers\PostController;
 */
 
 /*Base view routes*/
+
 Route::view('/', 'home');
 Route::view('/about', 'about');
 
