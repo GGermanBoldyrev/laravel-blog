@@ -20,7 +20,8 @@ module.exports = {
           width: {
               "250px": 250,
               '1175px': 1175,
-              '60px': 60
+              '60px': 60,
+              'welcome-text-2xl': 870,
           },
           height: {
               "76px": 76,
