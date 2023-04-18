@@ -15,14 +15,13 @@ use App\Http\Controllers\PostController;
 */
 
 /*Base view routes*/
-
 Route::view('/', 'home');
 Route::view('/about', 'about');
 
 /*Post controller routes*/
 Route::resource('/posts', PostController::class);
 
-/*Fallback for 404 page*/
+/*Fallback, если маршрута не существует*/
 Route::fallback(function () {
     return view('404');
 });

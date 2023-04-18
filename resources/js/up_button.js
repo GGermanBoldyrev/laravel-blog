@@ -13,24 +13,20 @@ upButton.hidden = true
 
 // Запускаем функцию scroll если пользователь прокрутил страницу вниз на pxScrolled
 window.addEventListener('scroll', () => {
-  scroll()
+    scroll()
 })
 
 // Запускаем функцию goTop на клик по кнопке
 upButton.addEventListener('click', () => {
-  goTop()
+    goTop()
 })
 
 // Функция для отображения/скрытия кнопки "Наверх"
 function scroll() {
-  if (document.body.scrollTop > pxScrolled || document.documentElement.scrollTop > pxScrolled) {
-    upButton.hidden = false
-  } else {
-    upButton.hidden = true
-  }
+    upButton.hidden = !(document.body.scrollTop > pxScrolled || document.documentElement.scrollTop > pxScrolled);
 }
 
 // Функция для скрола наверх
 function goTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+    window.scrollTo({top: 0, behavior: 'smooth'})
 }
