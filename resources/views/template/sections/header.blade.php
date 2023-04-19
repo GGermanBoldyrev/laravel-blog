@@ -10,14 +10,14 @@
     {{--Помещаем header в container--}}
     <div class="container mx-auto">
         {{--Сам header--}}
-        <div class="text-white flex justify-between h-76px items-center">
+        <div class="text-white flex justify-between h-[76px] items-center">
             {{--Левая часть header--}}
             <div class="font-logo text-6xl">
                 <a href="/" class="hover:cursor-default">Car Blog</a>
             </div>
             {{--Правая часть header--}}
             <div class="text-2xl flex h-full items-center relative left-1.5">
-                <ul class="flex justify-between items-center h-full w-250px
+                <ul class="flex justify-between items-center h-full w-[250px]
                            [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li]:px-1.5 [&>li]:duration-300">
                     {{--Пробегаемся по массиву и отрисовываем ссылки--}}
                     @foreach($titles as $title)

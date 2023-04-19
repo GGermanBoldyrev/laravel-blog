@@ -22,6 +22,7 @@
     {{-- Подключаем JavaScript файлы--}}
     @vite('resources/js/text_animation.js')
     @vite('resources/js/up_button.js')
+    @vite('resources/js/arrow_down.js')
 </body>
 
 </html>
