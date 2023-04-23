@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="bg-background h-[10000px]">
+
         {{--Блок с видео--}}
         <div class="relative bg-header">
             {{--Видео--}}
@@ -38,6 +39,7 @@
                 </div>
             </div>
         </div>
+
         {{-- Основной контент после блока с видео --}}
         <div id="home-content">
             Content
