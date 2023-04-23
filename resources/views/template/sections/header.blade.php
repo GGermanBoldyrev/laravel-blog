@@ -1,12 +1,19 @@
 {{--Массив по которому будеи итерироваться чтобы отрендерить элементы списка--}}
 @php($titles = [
 ['href' => '/', 'title' => 'Home'],
-['href' => '/about', 'title' => 'About'],
-['href' => '/posts', 'title' => 'Blog']
+['href' => '/posts', 'title' => 'Blog'],
+['href' => '/login', 'title' => 'Log in']
 ])
 
 {{--Основной код для header--}}
-<div class="sticky z-10">
+<div
+    {{--Если мы находимся на главной странице--}}
+    @if(url()->current() === env("APP_URL"))
+        class="absolute z-10 w-full"
+    @else
+        class="sticky top-0 bg-header w-full"
+    @endif
+>
     {{--Помещаем header в container--}}
     <div class="container mx-auto">
         {{--Сам header--}}
@@ -17,23 +24,23 @@
             </div>
             {{--Правая часть header--}}
             <div class="text-2xl flex h-full items-center relative left-1.5">
-                <ul class="flex justify-between items-center h-full w-[250px]
-                           [&>li]:h-full [&>li]:flex [&>li]:items-center [&>li]:px-1.5 [&>li]:duration-300">
+                <ul class="flex justify-between items-center h-full w-[250px]">
                     {{--Пробегаемся по массиву и отрисовываем ссылки--}}
                     @foreach($titles as $title)
-                        <li
-                            {{--Если мы находимся на главной странице--}}
-                            @if(url()->current() === env("APP_URL"))
-                                class="hover:text-slate-400"
-                            {{--Если мы находимся на любой странице, кроме главной--}}
-                            @else
-                                class="hover:bg-background"
-                            @endif>
-                            {{--Отрисовываем ссылки--}}
-                            <a href="{{ $title['href'] }}">
-                                {{ $title['title'] }}
-                            </a>
-                        </li>
+                    <li class="h-full flex items-center">
+                        {{--Отрисовываем ссылки--}}
+                        <a href="{{ $title['href'] }}"
+                           {{--Если мы находимся на главной странице--}}
+                           @if(url()->current() === env("APP_URL"))
+                               class="px-1.5 hover:text-slate-300 duration-300"
+                           {{--Если мы находимся на любой странице, кроме главной--}}
+                           @else
+                               class="h-full flex items-center px-1.5 hover:bg-background duration-300"
+                            @endif
+                        >
+                            {{ $title['title'] }}
+                        </a>
+                    </li>
                     @endforeach
                 </ul>
             </div>

@@ -14,14 +14,15 @@ use App\Http\Controllers\PostController;
 |
 */
 
-/*Base view routes*/
-Route::view('/', 'home');
-Route::view('/about', 'about');
+/*Main page route*/
+Route::view('/', 'pages.home');
 
 /*Post controller routes*/
 Route::resource('/posts', PostController::class);
 
+/*Что то связанное с логином и регистрацией*/
+
 /*Fallback, если маршрута не существует*/
 Route::fallback(function () {
-    return view('404');
+    return view('pages.404');
 });
