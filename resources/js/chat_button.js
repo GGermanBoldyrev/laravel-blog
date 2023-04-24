@@ -2,23 +2,20 @@ import './bootstrap';
 
 // Задаем переменные
 const chatButton  = document.getElementById('chat-button');
-const chatBlock = document.getElementById('chat-block');
 const closeButton = document.getElementById('chat-close');
+const chatBlock = document.getElementById('chat-block');
 
-// Изначатьно чат будет скрыт, и отображаться на странице будет только кнопка
-chatBlock.hidden = false;
-chatButton.hidden = true;
+// Изначально чат скрыт
+// chatBlock.classList.add('hidden')
 
-// Добавляем открытие чата на клик по кнопке
+// Открываем чат на нажатие кнопки
 chatButton.addEventListener('click', () => {
-    // Скрываем кнопку чата
-    chatButton.hidden = true;
-    // Показываем блок с чатом
-    chatBlock.hidden = false;
-});
+    chatButton.classList.add('hidden')
+    chatBlock.classList.remove('hidden')
+})
 
-// Закрываем чат на клик по крестику
+// Скрываем чат на нажатие кнопки
 closeButton.addEventListener('click', () => {
-    chatBlock.hidden = true;
-    chatButton.hidden = false;
+    chatButton.classList.remove('hidden')
+    chatBlock.classList.add('hidden')
 })

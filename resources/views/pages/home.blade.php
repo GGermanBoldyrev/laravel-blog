@@ -28,7 +28,7 @@
                         absolute bottom-0 left-1/2 translate-x-minus-50%">
                 {{--Кнопка "Get started"--}}
                 <a href="/posts" class="p-3 border text-4xl w-fit rounded
-                                        hover:scale-105 duration-300">
+                                        hover:scale-105 hover:text-white hover:border-white duration-300">
                     Get started
                 </a>
                 {{--Стрелка вниз--}}
@@ -40,9 +40,7 @@
             </div>
         </div>
 
-        {{-- Основной контент после блока с видео --}}
-        <div id="home-content">
-            Content
-        </div>
+        {{--Основной контент после блока с видео--}}
+        <div id="home-content">Content</div>
     </div>
 @endsection

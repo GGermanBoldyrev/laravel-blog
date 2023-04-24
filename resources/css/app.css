@@ -27,6 +27,10 @@ body::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+.hidden {
+    display: none;
+}
+
 /* Анимация цвета для главной страницы */
 .animate-color {
     animation: animate-color 12s infinite;
