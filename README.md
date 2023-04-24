@@ -1,15 +1,15 @@
-## Go to folder
+###### Go to folder
 
-## git clone https://github.com/GGermanBoldyrev/laravel-blog.git
+###### git clone https://github.com/GGermanBoldyrev/laravel-blog.git
 
-## composer install 
+###### composer install 
 
-## cp .env.example .env
+###### cp .env.example .env
 
-## php artisan key:generate
+###### php artisan key:generate
 
-## php artisan migrate
+###### php artisan migrate
 
-## ./vendor/bin/sail up
+###### ./vendor/bin/sail up
 
-## npm run dev
+###### npm run dev
