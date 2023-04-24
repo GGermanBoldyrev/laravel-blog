@@ -92,3 +92,18 @@ body::-webkit-scrollbar-thumb {
         transform: scaleY(1);
     }
 }
+
+/* Анимация закрывания чата */
+.close {
+    animation: close 0.5s;
+}
+
+@keyframes close {
+    from {
+        transform: scaleY(1);
+    }
+
+    to {
+        transform: scaleY(0.2);
+    }
+}

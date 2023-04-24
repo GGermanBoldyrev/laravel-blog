@@ -20,8 +20,15 @@ chatButton.addEventListener('click', () => {
 
 // Скрываем чат на нажатие кнопки
 closeButton.addEventListener('click', () => {
-    // Закрываем чат
-    chatBlock.classList.add('hidden');
-    // Показываем кнотку
-    chatButton.classList.remove('hidden');
+    // Запускаем анимацию
+    chatBlock.classList.add('close')
+    // Дожидаемся завершения антимации
+    setTimeout(() => {
+        // Удаляем анимацию
+        chatBlock.classList.remove('close')
+        // Закрываем чат
+        chatBlock.classList.add('hidden');
+        // Показываем кнотку
+        chatButton.classList.remove('hidden');
+    }, 500)      
 });
