@@ -16,6 +16,7 @@ module.exports = {
               "background" : "#4583AA",
               "footer": "#1D2B34",
               "button-hover": "#3b7091",
+              "chat": "#5c7d8a",
           },
           height: {
               "screen-minus-header": 'calc(100vh - 76px)',
@@ -29,6 +30,8 @@ module.exports = {
           },
       },
     },
-    plugins: [],
+    plugins: [
+        require('tailwind-scrollbar-hide')
+    ],
 }
 

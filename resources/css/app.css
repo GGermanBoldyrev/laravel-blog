@@ -76,3 +76,19 @@ body::-webkit-scrollbar-thumb {
         transform: translateY(0px);
     }
 }
+
+
+/* Анимация открытия чата */
+.open {
+    animation: open 0.5s;
+}
+
+@keyframes open {
+    from {
+        transform: scaleY(0.2);
+    }
+
+    to {
+        transform: scaleY(1);
+    }
+}
