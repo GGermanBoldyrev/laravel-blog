@@ -15,7 +15,7 @@ use App\Http\Controllers\PostController;
 */
 
 /*Main page route*/
-Route::view('/', 'pages.home');
+Route::view('/', 'home');
 
 /*Post controller routes*/
 Route::resource('/posts', PostController::class);
@@ -24,5 +24,5 @@ Route::resource('/posts', PostController::class);
 
 /*Fallback, если маршрута не существует*/
 Route::fallback(function () {
-    return view('pages.404');
+    return view('404');
 });

@@ -1,4 +1,4 @@
-{{--Расположение кнопки на странице--}}
+<!--Расположение кнопки на странице-->
 <div class="fixed bottom-10 left-10">
     <!--Через js на клик будем скрывать кнопку чата и показывать блок-->
 
@@ -19,34 +19,48 @@
         </div>
         <!--Тело чата, где выводятся сообщения-->
         <div class="my-5 overflow-y-scroll scrollbar-hide">
-            <!--Будем выводить сообщения-->
-            @for ($i = 0; $i < 6; $i++)
-                <div class="bg-message rounded mb-3">
-                    <!--Шапка сообщения-->
-                    <div class="flex justify-between items-center">
-                        <div class="text-xl">Герман Болдырев</div>
-                        <div class="text-sm">23:12 - 12 feb</div>
+            <!--Если пользователь авторизован, то выводим чат, иначе выводим просьбу авторизоваться-->
+            @if (false)
+                <!--Будем выводить сообщения-->
+                @for ($i = 0; $i < 6; $i++)
+                    <div class="mb-3.5">
+                        <!--Шапка сообщения-->
+                        <div class="flex justify-between items-center">
+                            <div class="text-xl">Герман Болдырев</div>
+                            <div class="text-sm">23:12 - 12 feb</div>
+                        </div>
+                        <div class="mt-1 text-stone-800">
+                            Здравствуйте, хочу купить вашу клавиатуру
+                            Здравствуйте, хочу купить вашу клавиатуру
+                            Здравствуйте, хочу купить вашу клавиатуру
+                            Здравствуйте, хочу купить вашу клавиатуру
+                        </div>
                     </div>
-                    <div class="mt-1 text-stone-800">
-                        Здравствуйте, хочу купить вашу клавиатуру
-                        Здравствуйте, хочу купить вашу клавиатуру
-                        Здравствуйте, хочу купить вашу клавиатуру
-                        Здравствуйте, хочу купить вашу клавиатуру
-                    </div>
+                @endfor
+            @else
+                <div class="text-center text-xl">
+                    Сhat is available only to authorized users
                 </div>
-            @endfor
+            @endif
         </div>
-        <!--Блок для набора текста-->
-        <div class="flex justify-between items-center">
-            <input type="text" placeholder="Enter your message"
-                   class="bg-chat px-[10px] py-[3px] rounded border border-black outline-0 placeholder-black w-full mr-[20px]
-                          focus:border-slate-300">
-            <div class="relative">
-                <img src="{{ asset('images/upward-black.png') }}" alt="Send" id="send-message"
-                     class="border border-black rounded-full p-1.5  hover:border-white hover:opacity-0 duration-200">
-                <img src="{{ asset('images/upward-white.png') }}" alt="Send" id="send-message"
-                     class="border border-white rounded-full p-1.5 absolute translate-y-[-100%] opacity-0 hover:opacity-100 duration-200">
+        <!--Блок для набора текста, только для авторизованных пользователей-->
+        @if (false)
+            <div class="flex justify-between items-center">
+                <input type="text" placeholder="Enter your message"
+                    class="bg-chat px-[10px] py-[3px] rounded border border-black outline-0 placeholder-black w-full mr-[20px]
+                            focus:border-slate-300">
+                <div class="relative">
+                    <img src="{{ asset('images/upward-black.png') }}" alt="Send" id="send-message"
+                        class="border border-black rounded-full p-1.5  hover:border-white hover:cursor-pointer hover:opacity-0 duration-200">
+                    <img src="{{ asset('images/upward-white.png') }}" alt="Send" id="send-message"
+                        class="border border-white rounded-full p-1.5 absolute translate-y-[-100%] opacity-0 hover:cursor-pointer hover:opacity-90 duration-200">
+                </div>
             </div>
-        </div>
+        @else
+            <div class="w-full flex justify-center">
+                <a href="/login" class="border rounded border-black py-1.5 px-2 w-fit
+                                        hover:text-slate-300 hover:border-slate-300 duration-300">Log in</a>
+            </div>
+        @endif
     </div>
 </div>
