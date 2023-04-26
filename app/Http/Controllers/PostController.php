@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+
 class PostController extends Controller
 {
     /*Метод для отображения всех постов*/
     public function index()
     {
-        $data = ['title' => 'Audi rebranding', 'subtitle' => 'audi started to die'];
-        return json_encode($data);
+        return view('post.index');
     }
 
     /*Метод для отображения страницы создания поста*/
