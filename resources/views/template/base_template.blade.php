@@ -25,7 +25,7 @@
 @vite('resources/js/text_animation.js')
 @vite('resources/js/up_button.js')
 @vite('resources/js/arrow_down.js')
-@vite('resources/js/chat_button')
+@vite('resources/js/open_close_button')
 </body>
 
 </html>

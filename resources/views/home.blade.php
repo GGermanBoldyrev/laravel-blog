@@ -1,8 +1,7 @@
 @extends('template.base_template')
 
 @section('content')
-    <div class="bg-background h-[10000px]">
-
+    <main>
         {{--Блок с видео--}}
         <div class="relative bg-header">
             {{--Видео--}}
@@ -39,8 +38,7 @@
                 </div>
             </div>
         </div>
-
         {{--Основной контент после блока с видео--}}
         <div id="home-content">Content</div>
-    </div>
+    </main>
 @endsection

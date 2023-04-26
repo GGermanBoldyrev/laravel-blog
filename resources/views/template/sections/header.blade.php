@@ -6,7 +6,7 @@
 ])
 
 {{--Основной код для header--}}
-<div
+<header
     {{--Если мы находимся на главной странице--}}
     @if(url()->current() === env("APP_URL"))
         class="absolute z-10 w-full"
@@ -46,4 +46,4 @@
             </div>
         </div>
     </div>
-</div>
+</header>

@@ -3,13 +3,13 @@
     <!--Через js на клик будем скрывать кнопку чата и показывать блок-->
 
     <!--Кнопка для чата-->
-    <div id="chat-button" class="px-[15px] py-[5px] border rounded text-white text-2xl flex-none
+    <div id="chat-open" class="px-[15px] py-[5px] border rounded text-white text-2xl flex-none
                                  hover:cursor-pointer hover:border-black hover:text-black duration-200">
         Chat
     </div>
 
     <!--Блок чата-->
-    <div id="chat-block" class="px-[20px] py-[10px] bg-chat w-[400px] h-[700px] flex justify-between flex-col
+    <div id="chat-section" class="px-[20px] py-[10px] bg-chat w-[400px] h-[700px] flex justify-between flex-col
                                 border-black rounded-xl border">
         <!--Верхняя часть чата-->
         <div class="flex justify-between items-center">
