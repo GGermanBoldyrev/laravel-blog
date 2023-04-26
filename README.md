@@ -1,6 +1,6 @@
 ## Simple laravel blog project
 
-#### Technologies
+### Technologies
 
 ###### - Laravel 10.0 (PHP 8.1)
 ###### - Blade
@@ -9,7 +9,7 @@
 ###### - JS
 ###### - JS dependencies (tailwind-scrollbar-hide)
 
-#### For local deployment you have to install docker
+### For local deployment you have to install docker
 
 ###### Go to folder
 ###### $ git clone https://github.com/GGermanBoldyrev/laravel-blog.git
