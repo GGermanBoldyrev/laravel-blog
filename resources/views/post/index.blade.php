@@ -21,7 +21,8 @@
                     <!--Отдельный пост-->
                     <div class="bg-header rounded h-fit">
                         <!--Картинка-->
-                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту" class="h-[250px] w-full object-cover">
+                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
+                             class="h-[250px] w-full object-cover">
                         <!--Блок-->
                         <div class="py-2 px-2.5 relative">
                             <!--Заголовок-->
