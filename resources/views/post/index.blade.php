@@ -41,7 +41,7 @@
                                 <!--Кнопка-->
                                 <a href="/posts/1">
                                     <div class="text-black border border-black w-fit px-2 py-1.5 rounded mt-5
-                                            hover:text-white hover:border-white duration-200">
+                                                hover:text-white hover:border-white duration-200">
                                         View full
                                     </div>
                                 </a>
