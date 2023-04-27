@@ -21,7 +21,7 @@
                     <!--Отдельный пост-->
                     <div class="bg-header rounded h-fit">
                         <!--Картинка-->
-                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту">
+                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту" class="h-[250px] w-full object-cover">
                         <!--Блок-->
                         <div class="py-2 px-2.5 relative">
                             <!--Заголовок-->
@@ -48,7 +48,6 @@
                             </div>
                         </div>
                     </div>
-
                 </section>
 
                 <!--Правая часть с фильтрами-->
