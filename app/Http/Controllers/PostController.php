@@ -8,6 +8,7 @@ class PostController extends Controller
     /*Метод для отображения всех постов*/
     public function index()
     {
+        /*Забираем данные фильтров из базы данных*/
         return view('post.index');
     }
 

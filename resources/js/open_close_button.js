@@ -11,7 +11,8 @@ const filterClose = document.getElementById('filter-close');
 
 // Изначально чат и фильтры скрыты
 chatSection.classList.add('hidden');
-filterSection.classList.add ('hidden');
+//filterSection.classList.add ('hidden');
+filterOpen.classList.add('hidden');
 
 // Открыть чат
 chatOpen.addEventListener('click', () => open(chatOpen, chatSection))
