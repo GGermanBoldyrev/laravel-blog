@@ -17,28 +17,31 @@
             <!--Часть страницы с контентом-->
             <div class="flex justify-between">
                 <!--Левая часть с постами-->
-                <section class="w-full grid gap-[60px] mr-[60px] xl:grid-cols-2 2xl:grid-cols-3">
+                <section class="w-full flex flex-wrap">
+                    {{--Пробегаемся по всем постам--}}
                     @foreach($posts as $post)
                         <!--Отдельный пост-->
-                        <div class="bg-header rounded h-fit">
+                        <div class="bg-header rounded h-fit mr-[60px] mb-[60px]
+                                    lg:w-[330px] xl:w-[400px] 2xl:w-[365px]">
                             <!--Картинка-->
                             <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
                                  class="h-[250px] w-full object-cover">
                             <!--Блок-->
                             <div class="py-2 px-2.5 relative hover:cursor-default">
                                 <!--Заголовок-->
-                                <div class="font-bold text-lg h-[84px] overflow-hidden">
+                                <div class="font-bold text-lg h-[84px] overflow-hidden
+                                            md:h-[56px] lg:h-[84px]">
                                     {{ $post['title'] }}
                                 </div>
                                 <!--Текст-->
                                 <div class="flex flex-col justify-between h-full">
-                                    <div class="mt-2 h-[260px] overflow-hidden">
+                                    <div class="mt-2 overflow-hidden h-[260px]">
                                         {{ $post['content'] }}
                                     </div>
                                     <!--Кнопка-->
                                     <a href="/posts/1">
                                         <div class="text-black border border-black w-fit px-2 py-1.5 rounded mt-5
-                                                hover:text-white hover:border-white duration-200">
+                                                    hover:text-white hover:border-white duration-200">
                                             View full
                                         </div>
                                     </a>

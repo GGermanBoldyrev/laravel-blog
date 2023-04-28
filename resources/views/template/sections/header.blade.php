@@ -11,7 +11,7 @@
     @if(url()->current() === env("APP_URL"))
         class="absolute z-10 w-full"
     @else
-        class="sticky top-0 bg-header w-full"
+        class="sticky top-0 bg-header w-full z-10"
     @endif
 >
     {{--Помещаем header в container--}}
