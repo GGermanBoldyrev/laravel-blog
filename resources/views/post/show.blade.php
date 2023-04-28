@@ -11,8 +11,9 @@
                         🠔 Go back
                     </a>
                 </div>
-                <!--Пост-->
+                <!--Блок с постом-->
                 <div class="flex justify-center">
+                    <!--Пост-->
                     <div class="rounded w-[750px]">
                         <!--Картинка-->
                         <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
@@ -21,9 +22,11 @@
                         <div class="font-bold text-3xl my-5">
                             {{ $post->title }}
                         </div>
+                        <!--Основной контент-->
                         <div class="font-medium text-xl">
                             {{ $post->content }}
                         </div>
+                        <!--Дата создания-->
                         <div class="font-medium mt-5">
                             {{ $post->created_at->format('Y-m-d') }}
                         </div>
