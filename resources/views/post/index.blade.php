@@ -31,20 +31,26 @@
                                 <!--Заголовок-->
                                 <div class="font-bold text-lg h-[84px] overflow-hidden
                                             md:h-[56px] lg:h-[84px]">
-                                    {{ $post['title'] }}
+                                    {{ $post->title }}
                                 </div>
                                 <!--Текст-->
                                 <div class="flex flex-col justify-between h-full">
                                     <div class="mt-2 overflow-hidden h-[260px]">
-                                        {{ $post['content'] }}
+                                        {{ $post->content }}
                                     </div>
-                                    <!--Кнопка-->
-                                    <a href="/posts/1">
-                                        <div class="text-black border border-black w-fit px-2 py-1.5 rounded mt-5
+                                    <div class="flex items-center justify-between mt-5">
+                                        <!--Ссылув на пост-->
+                                        <a href="/posts/{{ $post->id }}">
+                                            <div class="text-black border border-black w-fit px-2 py-1.5 rounded
                                                     hover:text-white hover:border-white duration-200">
-                                            View full
+                                                View full
+                                            </div>
+                                        </a>
+                                        <!--Дата создания поста без времени-->
+                                        <div>
+                                            {{ $post->created_at->format('Y-m-d') }}
                                         </div>
-                                    </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

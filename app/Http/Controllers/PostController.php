@@ -4,12 +4,12 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Post;
-use Illuminate\Support\Facades\DB;
+use Illuminate\View\View;
 
 class PostController extends Controller
 {
     /*Метод для отображения всех постов*/
-    public function index()
+    public function index(): View
     {
         /*Все посты*/
         $posts = Post::all();
@@ -29,9 +29,11 @@ class PostController extends Controller
     }
 
     /*Метод для отображения конкретного поста*/
-    public function show($id)
+    public function show($id): View
     {
-        return "Post number $id";
+        /*Ищем пост по id*/
+        $post = Post::find($id);
+        return view('post.show', ['post' => $post]);
     }
 
     /*Метод для отображения страницы редактирования поста*/
