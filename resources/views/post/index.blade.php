@@ -18,37 +18,34 @@
             <div class="flex justify-between">
                 <!--Левая часть с постами-->
                 <section class="w-full grid gap-[60px] mr-[60px] xl:grid-cols-2 2xl:grid-cols-3">
-                    <!--Отдельный пост-->
-                    <div class="bg-header rounded h-fit">
-                        <!--Картинка-->
-                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
-                             class="h-[250px] w-full object-cover">
-                        <!--Блок-->
-                        <div class="py-2 px-2.5 relative">
-                            <!--Заголовок-->
-                            <div class="font-bold text-lg max-h-[84px] overflow-hidden">
-                                Можно ехать дальше или нет?
-                            </div>
-                            <!--Текст-->
-                            <div class="flex flex-col justify-between h-full">
-                                <div class="mt-2 max-h-[260px] overflow-hidden">
-                                    Ситуация в свежей задаче из цикла «Оштрафуют или нет» на первый взгляд простая. У стоящего
-                                    слева от вас трамвая закрыты двери, а от остановки к нему не идут пешеходы — уступать дорогу
-                                    некому. Да и вообще кажется, что он просто ждёт зелёного сигнала светофора. Получается, вам
-                                    можно проехать мимо трамвая и встать у поворота направо или это будет нарушением Правил?
-                                    некому. Да и вообще кажется, что он просто ждёт зелёного сигнала светофора. Получается, вам
-                                    можно проехать мимо трамвая и встатнекому. Да и вообще кажется, что он просто ждёт зелёного сигнала светофора. Получается, вам
+                    @foreach($posts as $post)
+                        <!--Отдельный пост-->
+                        <div class="bg-header rounded h-fit">
+                            <!--Картинка-->
+                            <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
+                                 class="h-[250px] w-full object-cover">
+                            <!--Блок-->
+                            <div class="py-2 px-2.5 relative hover:cursor-default">
+                                <!--Заголовок-->
+                                <div class="font-bold text-lg h-[84px] overflow-hidden">
+                                    {{ $post['title'] }}
                                 </div>
-                                <!--Кнопка-->
-                                <a href="/posts/1">
-                                    <div class="text-black border border-black w-fit px-2 py-1.5 rounded mt-5
-                                                hover:text-white hover:border-white duration-200">
-                                        View full
+                                <!--Текст-->
+                                <div class="flex flex-col justify-between h-full">
+                                    <div class="mt-2 h-[260px] overflow-hidden">
+                                        {{ $post['content'] }}
                                     </div>
-                                </a>
+                                    <!--Кнопка-->
+                                    <a href="/posts/1">
+                                        <div class="text-black border border-black w-fit px-2 py-1.5 rounded mt-5
+                                                hover:text-white hover:border-white duration-200">
+                                            View full
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @endforeach
                 </section>
 
                 <!--Правая часть с фильтрами-->

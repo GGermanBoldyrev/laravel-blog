@@ -3,13 +3,17 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Post;
+use Illuminate\Support\Facades\DB;
+
 class PostController extends Controller
 {
     /*Метод для отображения всех постов*/
     public function index()
     {
-        /*Забираем данные фильтров из базы данных*/
-        return view('post.index');
+        /*Все посты*/
+        $posts = Post::all();
+        return view('post.index', ['posts' => $posts]);
     }
 
     /*Метод для отображения страницы создания поста*/
