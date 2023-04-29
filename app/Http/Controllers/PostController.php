@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 
 use App\Models\Post;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class PostController extends Controller
@@ -23,9 +25,17 @@ class PostController extends Controller
     }
 
     /*Post запрос на создание поста*/
-    public function store()
+    public function store(Request $request): RedirectResponse
     {
-        return 'Post query';
+        $img = 'asd';
+        $title = $request->input('title');
+        $content = $request->input('content');
+
+        /*if ($request->has('checkbox')){
+            return redirect('/posts/{$id}');
+        }*/
+
+        return redirect('/posts');
     }
 
     /*Метод для отображения конкретного поста*/
