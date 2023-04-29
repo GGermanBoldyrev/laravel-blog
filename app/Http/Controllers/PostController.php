@@ -17,9 +17,9 @@ class PostController extends Controller
     }
 
     /*Метод для отображения страницы создания поста*/
-    public function create()
+    public function create(): View
     {
-        return 'Create post';
+        return view('post.create');
     }
 
     /*Post запрос на создание поста*/
