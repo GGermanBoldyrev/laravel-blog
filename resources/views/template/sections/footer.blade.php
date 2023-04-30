@@ -2,7 +2,7 @@
     {{--Основные стили для футера--}}
     <div class="bg-footer h-[150px] text-white flex items-center justify-center">
         <!--Контейнер-->
-        <div class="container mx-auto">
+        <div class="container mx-auto @if(url()->current() === env('APP_URL')) px-[10%] @endif">
             <div class="flex justify-between items-center">
                 <!--Левая часть с иконками-->
                 <span class="flex">

@@ -11,14 +11,13 @@
             {{--Блок текста welcome--}}
             <div class="top-1/2 absolute left-1/2 translate-x-minus-50% translate-y-minus-50% w-fit">
                 {{--Welcome text--}}
-                <div id="welcome-text" class="whitespace-nowrap opacity-80
-                                              text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl
+                <div id="welcome-text" class="opacity-80 text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl
                                               hover:cursor-default">
                     Glad to see
                 </div>
                 {{--Цитата--}}
                 <div class="w-full flex justify-center text-slate-300 mt-3
-                            text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+                            text-xs md:text-sm lg:text-base xl:text-lg 2xl:text-xl">
                     Genius is ninety-nine percent perspiration.
                 </div>
             </div>
@@ -26,7 +25,7 @@
             <div class="w-fit text-slate-300 flex justify-between items-center flex-col h-1/4
                         absolute bottom-0 left-1/2 translate-x-minus-50%">
                 {{--Кнопка "Get started"--}}
-                <a href="/posts" class="p-3 border text-4xl w-fit rounded
+                <a href="/posts" class="p-2 border text-3xl w-fit rounded
                                         hover:scale-105 hover:text-white hover:border-white duration-300">
                     Get started
                 </a>
@@ -39,7 +38,8 @@
             </div>
         </div>
         {{--Основной контент после блока с видео--}}
-        <div id="home-content" class="mt-[100px] container mx-auto scroll-m-[100px]">
+        <div id="home-content" class="mt-[100px] container mx-auto scroll-m-[100px] px-[10%]">
+
             <!--Первый блок с заголовком-->
             <section class="text-white">
                 <h1 class="text-center text-5xl">Why CarBlog?</h1>
@@ -52,17 +52,18 @@
                     cars just as much as our readers do!
                 </p>
             </section>
+
             <!--Секция с преимуществами-->
-            <section class="mt-[100px] bg-header rounded-2xl p-[100px]">
+            <section class="mt-[100px] bg-header rounded-2xl p-[60px]">
                 {{--Блок по центру с преимуществами--}}
-                <div class="grid grid-cols-2 gap-[100px]">
+                <div class="grid grid-cols-2 gap-[60px]">
                     <!--Итерируемся по преимуществам-->
                     @foreach($benefits as $benefit)
                         <div class="flex">
-                            <img src="images/{{ $benefit->img }}" alt="icon" class="w-[150px]">
+                            <img src="images/{{ $benefit->img }}.png" alt="icon" class="w-[130px]">
                             <div class="ml-[30px]">
                                 <h2 class="text-2xl text-slate-100">{{ $benefit->title }}</h2>
-                                <p class="text-md mt-3 text-slate-300 w-[80%]">{{ $benefit->content }}</p>
+                                <p class="text-md mt-3 text-slate-300">{{ $benefit->content }}</p>
                             </div>
                         </div>
                     @endforeach
