@@ -17,6 +17,7 @@ module.exports = {
               "footer": "#403F4C",
               "button-hover": "#3b7091",
               "chat": "#5c7d8a",
+              "header-hover": "#496571",
           },
           height: {
               "screen-minus-header": 'calc(100vh - 76px)',

@@ -17,11 +17,12 @@
             <!--Часть страницы с контентом-->
             <div class="flex justify-between">
                 <!--Левая часть с постами-->
-                <section class="w-full flex flex-wrap">
+                <section class="w-full grid gap-[60px]
+                                2xl:grid-cols-3 ">
                     {{--Пробегаемся по всем постам--}}
                     @foreach($posts as $post)
                         <!--Отдельный пост-->
-                        <div class="bg-header rounded h-fit mr-[60px] mb-[60px]
+                        <div class="bg-header rounded h-fit
                                     lg:w-[330px] xl:w-[400px] 2xl:w-[365px]">
                             <!--Картинка-->
                             <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
