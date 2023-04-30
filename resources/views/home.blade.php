@@ -39,11 +39,11 @@
             </div>
         </div>
         {{--Основной контент после блока с видео--}}
-        <div id="home-content" class="mt-[60px] container mx-auto">
+        <div id="home-content" class="mt-[100px] container mx-auto scroll-m-[100px]">
             <!--Первый блок с заголовком-->
             <section class="text-white">
                 <h1 class="text-center text-5xl">Why CarBlog?</h1>
-                <p class="text-xl mt-[30px] text-center">
+                <p class="text-xl mt-[30px] text-center leading-9">
                     Our blog about cars is a great source of information for all car enthusiasts. We cover a range of
                     topics, including reviews of the latest car models, tips for car maintenance, updates on industry
                     news, and discussions about car culture. Whether you're into sports cars, electric vehicles, or
@@ -53,47 +53,19 @@
                 </p>
             </section>
             <!--Секция с преимуществами-->
-            <section class="mt-[60px] bg-header">
-                <div class="">
-                    <!--Interface-->
-                    <div>
-                        <img src="{{ asset('images/interface.png') }}" alt="icon">
-                        <div>
-                            <h2>User-friendly interface</h2>
-                            <p>We offer a seamless user experience with a user-friendly interface that is easy to
-                                navigate
-                            </p>
+            <section class="mt-[100px] bg-header rounded-2xl p-[100px]">
+                {{--Блок по центру с преимуществами--}}
+                <div class="grid grid-cols-2 gap-[100px]">
+                    <!--Итерируемся по преимуществам-->
+                    @foreach($benefits as $benefit)
+                        <div class="flex">
+                            <img src="images/{{ $benefit->img }}" alt="icon" class="w-[150px]">
+                            <div class="ml-[30px]">
+                                <h2 class="text-2xl text-slate-100">{{ $benefit->title }}</h2>
+                                <p class="text-md mt-3 text-slate-300 w-[80%]">{{ $benefit->content }}</p>
+                            </div>
                         </div>
-                    </div>
-                    <!--Topics-->
-                    <div>
-                        <img src="{{ asset('images/talk.png') }}" alt="icon">
-                        <div>
-                            <h2>Up to date information</h2>
-                            <p>Our website provides the latest and most relevant topics, ensuring that our readers are
-                                always informed and up to date
-                            </p>
-                        </div>
-                    </div>
-                    <!--Reliablity-->
-                    <div>
-                        <img src="{{ asset('images/available.png') }}" alt="icon">
-                        <div>
-                            <h2>Reliability</h2>
-                            <p>Our website ensures that users can access it without experiencing downtime or crashes,
-                                thereby ensuring that they stay engaged with the content</p>
-                        </div>
-                    </div>
-                    <!--Security-->
-                    <div>
-                        <img src="{{ asset('images/shield.png') }}" alt="icon">
-                        <div>
-                            <h2>Security</h2>
-                            <p>We pride ourselves on providing a highly secure platform that protects user data
-                                and privacy
-                            </p>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </section>
         </div>

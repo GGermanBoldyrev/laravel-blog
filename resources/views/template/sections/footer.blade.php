@@ -1,4 +1,4 @@
-<footer class="mt-[50px]">
+<footer class="mt-[100px]">
     {{--Основные стили для футера--}}
     <div class="bg-footer h-[150px] text-white flex items-center justify-center">
         <!--Контейнер-->
