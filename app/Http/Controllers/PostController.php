@@ -13,7 +13,6 @@ class PostController extends Controller
     /*Метод для отображения всех постов*/
     public function index(): View
     {
-        /*Все посты*/
         $posts = Post::all();
         return view('post.index', ['posts' => $posts]);
     }
@@ -30,8 +29,9 @@ class PostController extends Controller
         $img = 'asd';
         $title = $request->input('title');
         $content = $request->input('content');
+        $checkbox = $request->boolean('checkbox');
 
-        /*if ($request->has('checkbox')){
+        /*if ($checkbox === true){
             return redirect('/posts/{$id}');
         }*/
 
@@ -41,7 +41,6 @@ class PostController extends Controller
     /*Метод для отображения конкретного поста*/
     public function show($id): View
     {
-        /*Ищем пост по id*/
         $post = Post::find($id);
         return view('post.show', ['post' => $post]);
     }
@@ -59,8 +58,8 @@ class PostController extends Controller
     }
 
     /*Метод для удаления поста*/
-    public function destroy($id)
+    public function destroy($id): RedirectResponse
     {
-        return "Delete post $id";
+        return redirect('posts');
     }
 }

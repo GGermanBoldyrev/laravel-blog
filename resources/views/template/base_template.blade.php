@@ -19,7 +19,7 @@
 @include('components.chat_button')
 
 {{-- Подключаем Footer --}}
-{{-- Сюда бдем писать Footer //bg-footer container mx-auto// --}}
+@include('template.sections.footer')
 
 {{-- Подключаем JavaScript файлы--}}
 @vite('resources/js/text_animation.js')

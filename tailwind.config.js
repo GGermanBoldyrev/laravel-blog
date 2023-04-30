@@ -14,7 +14,7 @@ module.exports = {
           colors: {
               "header": "#577783",
               "background" : "#4583AA",
-              "footer": "#1D2B34",
+              "footer": "#403F4C",
               "button-hover": "#3b7091",
               "chat": "#5c7d8a",
           },

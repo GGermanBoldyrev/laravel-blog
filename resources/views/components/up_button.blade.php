@@ -1,7 +1,7 @@
 {{--Позиция кнопки--}}
 <div id="up-button" class="fixed bottom-10 right-10">
     {{--Общее оформление кнопки--}}
-    <div class="h-[60px] w-[60px] border rounded-full text-black text-2xl font-medium relative flex justify-center items-center
+    <div class="h-[50px] w-[50px] border rounded-full text-black text-xl font-medium relative flex justify-center items-center
                 hover:border-black hover:cursor-pointer">
         {{--На hover появляется текст--}}
         <div class="flex items-center justify-center w-full h-full rounded-full
