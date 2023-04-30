@@ -39,7 +39,6 @@
         </div>
         {{--Основной контент после блока с видео--}}
         <div id="home-content" class="mt-[100px] container mx-auto scroll-m-[100px] px-[10%]">
-
             <!--Первый блок с заголовком-->
             <section class="text-white">
                 <h1 class="text-center text-5xl">Why CarBlog?</h1>
@@ -52,7 +51,6 @@
                     cars just as much as our readers do!
                 </p>
             </section>
-
             <!--Секция с преимуществами-->
             <section class="mt-[100px] bg-header rounded-2xl p-[60px]">
                 {{--Блок по центру с преимуществами--}}
