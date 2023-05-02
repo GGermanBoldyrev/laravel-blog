@@ -33,7 +33,7 @@
                     {{--Контейнер для кнопки submit--}}
                     <div class="w-full flex justify-center mt-5">
                         <!--Кнопка submit-->
-                        <x-form-submit></x-form-submit>
+                        <x-form-submit/>
                     </div>
                 </form>
             </div>

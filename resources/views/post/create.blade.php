@@ -16,12 +16,12 @@
                     <!--Ввод title-->
                     <div class="flex flex-col mt-[30px]">
                         <x-form-label for="title">Enter the title</x-form-label>
-                        <x-form-input id="title" placeholder="Title"></x-form-input>
+                        <x-form-input id="title" placeholder="Title"/>
                     </div>
                     <!--Ввод content-->
                     <div class="flex flex-col mt-[30px]">
                         <x-form-label for="content">Enter the text</x-form-label>
-                        <x-form-textarea id="content" placeholder="Text"></x-form-textarea>
+                        <x-form-textarea id="content" placeholder="Text"/>
                     </div>
                     {{--Прикрепить картинку--}}
                     <div class="mt-5">Add an image</div>
@@ -33,7 +33,7 @@
                     {{--Контейнер для кнопки submit--}}
                     <div class="w-full flex justify-center mt-5">
                         <!--Кнопка submit-->
-                        <x-form-submit></x-form-submit>
+                        <x-form-submit/>
                     </div>
                 </form>
             </div>
