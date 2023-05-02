@@ -67,6 +67,29 @@
                     @endforeach
                 </div>
             </section>
+            <!--Секция кто использует-->
+            <section class="mt-[100px] text-white">
+                {{--Заголовок--}}
+                <h1 class="text-5xl text-center">Inspired by</h1>
+                {{--Список--}}
+                <ul class="mt-[30px] flex justify-between items-center">
+                    <li>
+                        <a href="https://auto.ru/mag/" target="_blank">
+                            <img src="{{ asset('images/inspired-2.png') }}" alt="icon" class="h-[80px]">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://news.drom.ru/" target="_blank">
+                            <img src="{{ asset('images/inspired-1.png') }}" alt="icon" class="h-[160px]">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.autonews.fr/" target="_blank">
+                            <img src="{{ asset('images/inspired-3.png') }}" alt="icon" class="h-[80px]">
+                        </a>
+                    </li>
+                </ul>
+            </section>
         </div>
     </main>
 @endsection

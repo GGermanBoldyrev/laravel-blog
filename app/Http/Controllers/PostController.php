@@ -31,9 +31,9 @@ class PostController extends Controller
         $content = $request->input('content');
         $checkbox = $request->boolean('checkbox');
 
-        /*if ($checkbox === true){
-            return redirect('/posts/{$id}');
-        }*/
+        if ($checkbox){
+            return redirect('/posts/${id}');
+        }
 
         return redirect('/posts');
     }

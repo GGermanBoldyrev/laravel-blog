@@ -5,12 +5,10 @@
         <div class="container mx-auto min-h-screen-minus-header">
             <div class="mt-[50px]">
                 <!--Кнопка назад-->
-                <div>
-                    <a href="/posts" class="text-white border rounded px-2 py-1 absolute
+                <a href="/posts" class="text-white border rounded px-2 py-1 absolute
                                             hover:border-black hover:text-black duration-200">
-                        🠔 Go back
-                    </a>
-                </div>
+                    🠔 Go back
+                </a>
                 <!--Блок с постом-->
                 <div class="flex justify-center">
                     <!--Пост-->

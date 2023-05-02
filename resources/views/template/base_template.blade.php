@@ -14,9 +14,9 @@
 @show
 
 {{--Подключаем кнопку up--}}
-@include('components.up_button')
+@include('components.other.up')
 {{--Подключаем кнопку чата--}}
-@include('components.chat_button')
+@include('components.other.chat')
 
 {{-- Подключаем Footer --}}
 @include('template.sections.footer')
