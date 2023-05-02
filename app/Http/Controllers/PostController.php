@@ -35,7 +35,7 @@ class PostController extends Controller
             return redirect('/posts/${id}');
         }
 
-        return redirect('/posts');
+        return redirect()->route('posts.show', ['post' => 1]);
     }
 
     /*Метод для отображения конкретного поста*/
@@ -53,9 +53,9 @@ class PostController extends Controller
     }
 
     /*Put или Patch запрос на редактирование поста*/
-    public function update($id)
+    public function update($id):RedirectResponse
     {
-        return "Post $id update";
+        return redirect()->route('posts.show', ['post' => $id]);
     }
 
     /*Метод для удаления поста*/

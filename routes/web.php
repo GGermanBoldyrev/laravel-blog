@@ -16,10 +16,10 @@ use App\Http\Controllers\PostController;
 */
 
 /*Main page route*/
-Route::resource('/', HomeController::class)->only('index');
+Route::resource('/', HomeController::class)->only('index')->names('home');
 
 /*Post controller routes*/
-Route::resource('/posts', PostController::class);
+Route::resource('/posts', PostController::class)->names('posts');
 
 /*Что то связанное с логином и регистрацией*/
 

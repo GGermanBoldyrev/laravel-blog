@@ -9,19 +9,19 @@
             <!--Блок с формой-->
             <div class="flex items-center justify-center min-h-screen-minus-header">
                 <!--Форма создания поста-->
-                <form action="{{ route('posts.store') }}" method="POST" class="w-[432px]">
+                <form action="{{ route('posts.store') }}" method="POST" class="w-[600px]">
                     @csrf
                     <!--Заголовок-->
                     <div class="text-5xl text-center">Edit your post</div>
                     <!--Ввод title-->
                     <div class="flex flex-col mt-[30px]">
                         <x-form-label for="title">Enter new title</x-form-label>
-                        <x-form-input id="title" placeholder="New title"></x-form-input>
+                        <x-form-textarea id="title" placeholder="New title" rows="2">{{ $post->title }}</x-form-textarea>
                     </div>
                     <!--Ввод content-->
                     <div class="flex flex-col mt-[30px]">
                         <x-form-label for="content">Enter new text</x-form-label>
-                        <x-form-textarea id="content" placeholder="New text"></x-form-textarea>
+                        <x-form-textarea id="content" placeholder="New text" rows="8">{{ $post->content }}</x-form-textarea>
                     </div>
                     {{--Прикрепить картинку--}}
                     <div class="mt-5">Add an image</div>
