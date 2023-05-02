@@ -5,17 +5,17 @@
         <div class="container mx-auto min-h-screen-minus-header">
             <div class="mt-[50px]">
                 <!--Кнопка назад-->
-                <a href="/posts" class="text-white border rounded px-2 py-1 absolute
-                                            hover:border-black hover:text-black duration-200">
-                    🠔 Go back
-                </a>
+                <x-button-back></x-button-back>
                 <!--Блок с постом-->
                 <div class="flex justify-center">
                     <!--Пост-->
                     <div class="rounded w-[750px]">
                         <!--Картинка-->
-                        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
-                             class="h-[450px] w-[750px] object-cover">
+                        <div>
+                            <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
+                                 class="h-[450px] w-[750px] object-cover">
+
+                        </div>
                         <!--Заголовок-->
                         <div class="font-bold text-3xl my-5">
                             {{ $post->title }}

@@ -46,9 +46,10 @@ class PostController extends Controller
     }
 
     /*Метод для отображения страницы редактирования поста*/
-    public function edit($id)
+    public function edit($id): View
     {
-        return "Edit post $id";
+        $post = Post::find($id);
+        return view('post.edit', ['post' => $post]);
     }
 
     /*Put или Patch запрос на редактирование поста*/

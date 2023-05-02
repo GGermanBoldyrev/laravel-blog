@@ -25,8 +25,21 @@
                         <div class="bg-header rounded h-fit
                                     lg:w-[330px] xl:w-[400px] 2xl:w-[365px]">
                             <!--Картинка-->
-                            <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
-                                 class="h-[250px] w-full object-cover">
+                            <div class="relative">
+                                <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
+                                     class="h-[250px] w-full object-cover">
+                                <!--Секция редактировать, удалиить-->
+                                <div class="flex absolute top-0 right-0 mt-1.5">
+                                    <!--Редактировать-->
+                                    <a href="/posts/{{ $post->id }}/edit">
+                                        <img src="{{ asset('images/edit.png') }}" alt="edit" class="h-[20px]">
+                                    </a>
+                                    <!--Удалить-->
+                                    <a href="#">
+                                        <img src="{{ asset('images/delete.png') }}" alt="delete" class="h-[20px] mx-1.5">
+                                    </a>
+                                </div>
+                            </div>
                             <!--Блок-->
                             <div class="py-2 px-2.5 relative hover:cursor-default">
                                 <!--Заголовок-->
