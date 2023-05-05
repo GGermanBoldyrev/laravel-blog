@@ -22,7 +22,7 @@
 @include('template.sections.footer')
 
 {{-- Подключаем JavaScript файлы--}}
-@vite('resources/js/app.js');
+@vite('resources/js/app.js')
 @vite('resources/js/text_animation.js')
 @vite('resources/js/up_button.js')
 @vite('resources/js/arrow_down.js')
