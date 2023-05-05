@@ -8,9 +8,6 @@ const upButton = document.getElementById('up-button')
 // На какой высоте от верха страницы в пикселях показывать кнопку
 const pxScrolled = 500
 
-// Изначально кнопка будет скрыта
-upButton.hidden = true
-
 // Запускаем функцию scroll если пользователь прокрутил страницу вниз на pxScrolled
 window.addEventListener('scroll', () => {
     scroll()

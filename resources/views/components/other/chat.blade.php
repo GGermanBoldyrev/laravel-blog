@@ -10,7 +10,7 @@
 
     <!--Блок чата-->
     <div id="chat-section" class="px-[20px] py-[10px] bg-chat w-[400px] h-[700px] flex justify-between flex-col
-                                border-black rounded-xl border">
+                                border-black rounded-xl border hidden">
         <!--Верхняя часть чата-->
         <div class="flex justify-between items-center">
             <div class="text-xl">Online chat</div>

@@ -6,9 +6,6 @@ const chatOpen = document.getElementById('chat-open');
 const chatClose = document.getElementById('chat-close');
 const chatSection = document.getElementById('chat-section');
 
-// Изначально чат скрыт
-chatSection.classList.add('hidden');
-
 // Открыть
 chatOpen.addEventListener('click', () => open(chatOpen, chatSection));
 

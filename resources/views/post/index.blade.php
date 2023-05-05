@@ -42,7 +42,7 @@
                     </div>
 
                     {{--Секция с фильтрами--}}
-                    <div id="filter-section" class="bg-header w-full px-2 py-1 rounded">
+                    <div id="filter-section" class="bg-header w-full px-2 py-1 rounded hidden">
                         <!--Верх фильтров-->
                         <div class="flex items-center justify-between">
                             <div class="text-lg">Filters</div>
