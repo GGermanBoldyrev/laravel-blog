@@ -31,11 +31,11 @@ class PostController extends Controller
         $content = $request->input('content');
         $checkbox = $request->boolean('checkbox');
 
-        if ($checkbox){
-            return redirect('/posts/${id}');
+        if ($checkbox) {
+            return redirect()->route('posts.show', ['post' => 1]);
         }
 
-        return redirect()->route('posts.show', ['post' => 1]);
+        return redirect()->route('posts.index');
     }
 
     /*Метод для отображения конкретного поста*/
@@ -61,6 +61,7 @@ class PostController extends Controller
     /*Метод для удаления поста*/
     public function destroy($id): RedirectResponse
     {
+        Post::destroy($id);
         return redirect('posts');
     }
 }

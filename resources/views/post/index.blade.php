@@ -35,9 +35,13 @@
                                         <img src="{{ asset('images/edit.png') }}" alt="edit" class="h-[20px]">
                                     </a>
                                     <!--Удалить-->
-                                    <a href="#">
-                                        <img src="{{ asset('images/delete.png') }}" alt="delete" class="h-[20px] mx-1.5">
-                                    </a>
+                                    <form method="POST" action="/posts/{{ $post->id }}"
+                                          onsubmit="return confirm('Delete this post?')">
+                                        @csrf
+                                        @method('DELETE')
+                                        <input type="image" src="{{ asset('images/delete.png') }}" alt="delete"
+                                               class="h-[20px] mx-1.5">
+                                    </form>
                                 </div>
                             </div>
                             <!--Блок-->
@@ -62,7 +66,12 @@
                                         </a>
                                         <!--Дата создания поста без времени-->
                                         <div>
-                                            {{ $post->created_at->format('Y-m-d') }}
+                                            <!--Если добалвять посты через субд, то может не быть даты создания поста-->
+                                            @if ( $post->created_at != null)
+                                                {{ $post->created_at->format('Y-m-d') }})
+                                            @else
+                                                Unknown
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
