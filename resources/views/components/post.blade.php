@@ -3,7 +3,7 @@
 <div class="bg-header rounded h-fit lg:w-[330px] xl:w-[400px] 2xl:w-[365px]">
     <!--Картинка-->
     <div class="relative">
-        <img src="{{ asset('images/image.jpeg') }}" alt="Кратинка к посту"
+        <img src="images/{{ $img }}" alt="Кратинка к посту"
              class="h-[250px] w-full object-cover">
         <!--Секция редактировать, удалиить-->
         <div class="flex absolute top-0 right-0 mt-1.5">

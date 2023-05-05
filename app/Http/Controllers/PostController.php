@@ -26,15 +26,31 @@ class PostController extends Controller
     /*Post запрос на создание поста*/
     public function store(Request $request): RedirectResponse
     {
-        $img = 'asd';
-        $title = $request->input('title');
-        $content = $request->input('content');
+        /*Валидируем данные*/
+        $request->validate([
+            'title' => ['required', 'unique:posts', 'min:8'],
+            'content' => ['required', 'min:32']
+        ]);
+
+        /*Заполняем данные*/
+        $filledData = [
+            'img' => $request->filled('img') ? $request->input('img') : 'no-image.jpeg',
+            'title' => $request->input('title'),
+            'content' => $request->input('content'),
+        ];
+
+        /*Создаем в бд новую запись*/
+        $post = Post::create($filledData);
+
+        /*Проверяем на checkbox*/
         $checkbox = $request->boolean('checkbox');
 
+        /*Если чекбокс стоит, то показываем страницу с постом*/
         if ($checkbox) {
-            return redirect()->route('posts.show', ['post' => 1]);
+            return redirect()->route('posts.show', ['post' => $post]);
         }
 
+        /*Если чекбокс не стоит, редирект на страницу постов*/
         return redirect()->route('posts.index');
     }
 
@@ -62,6 +78,6 @@ class PostController extends Controller
     public function destroy($id): RedirectResponse
     {
         Post::destroy($id);
-        return redirect('posts');
+        return redirect()->route('posts.index');
     }
 }

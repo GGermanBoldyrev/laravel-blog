@@ -24,6 +24,7 @@
                         <!--Отдельный пост-->
                         <x-post
                             id="{{ $post->id }}"
+                            img="{{ $post->img }}"
                             title="{{ $post->title }}"
                             content="{{ $post->content }}"
                             time="{{ $post->created_at->format('d / m / y') }}"
