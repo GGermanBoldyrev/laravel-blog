@@ -28,30 +28,23 @@ class PostController extends Controller
     {
         /*Валидируем данные*/
         $request->validate([
-            'title' => ['required', 'unique:posts', 'min:8'],
-            'content' => ['required', 'min:32']
+            'title' => ['required', 'unique:posts', 'min:8', 'max:255'],
+            'content' => ['required', 'unique:posts' ,'min:32']
         ]);
 
-        /*Заполняем данные*/
-        $filledData = [
+        /*Создаем в бд новую запись*/
+        $post = Post::create([
             'img' => $request->filled('img') ? $request->input('img') : 'no-image.jpeg',
             'title' => $request->input('title'),
             'content' => $request->input('content'),
-        ];
+        ]);
 
-        /*Создаем в бд новую запись*/
-        $post = Post::create($filledData);
-
-        /*Проверяем на checkbox*/
-        $checkbox = $request->boolean('checkbox');
-
-        /*Если чекбокс стоит, то показываем страницу с постом*/
-        if ($checkbox) {
+        /*Если чекбокс стоит, то показываем страницу с постом, иначе страницу со всеми постами*/
+        if ($request->has('checkbox')) {
             return redirect()->route('posts.show', ['post' => $post]);
+        } else {
+            return redirect()->route('posts.index');
         }
-
-        /*Если чекбокс не стоит, редирект на страницу постов*/
-        return redirect()->route('posts.index');
     }
 
     /*Метод для отображения конкретного поста*/

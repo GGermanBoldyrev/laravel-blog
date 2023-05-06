@@ -5,7 +5,7 @@
         {{--Контейнер --}}
         <div class="container mx-auto">
             <!--Кнопка назад-->
-            <x-button-back class="mt-[50px]"></x-button-back>
+            <x-back_posts_button/>
             <!--Блок с формой-->
             <div class="flex items-center justify-center min-h-screen-minus-header">
                 <!--Форма создания поста-->

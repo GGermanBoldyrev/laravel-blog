@@ -6,8 +6,8 @@
             <div class="[&>p]:py-3">
                 <p class="font-bold text-7xl text-white">Whoops!</p>
                 <p class="font-medium text-5xl">This page got lost in conversation.</p>
-                <p class="text-2xl">Not to worry. You can head over to our <a href="/"
-                                                                              class="text-blue-700 hover:text-white duration-300">homepage.</a>
+                <p class="text-2xl">Not to worry. You can head over to our
+                    <a href="/" class="text-blue-700 hover:text-white duration-300">homepage.</a>
                 </p>
             </div>
             <div>
